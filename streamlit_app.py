@@ -94,7 +94,7 @@ if not st.session_state['song_df'].empty and st.session_state['song_df']['得点
 else:
     st.write("得点データがありません。")
 
-# GitHubにプッシュする関数（キーやトークンは別途設定が必要です）
+# GitHubにプッシュする関数（キーやトークンは別途設定が必要）
 def push_to_github():
     commit_message = f"データ更新: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
     subprocess.run(["git", "add", CSV_FILE_PATH])
